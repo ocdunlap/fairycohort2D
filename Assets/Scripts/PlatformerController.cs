@@ -29,11 +29,11 @@ public class PlatformerController : MonoBehaviour
     {
 
         Vector3 jumpValue = Vector2.up * jumpHeight;
-        
+
         //If we're able to jump and the player has pressed the space bar, then we jump!
         if (Input.GetKeyDown(KeyCode.Space) && canJump == true)
         {
-            rb.velocity = Vector2.up * jumpHeight;
+            rb.velocity = jumpValue;
         }
 
         //This is our movement function that checks for key presses, and updates the rigidbody's velocity accordingly
